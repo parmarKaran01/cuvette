@@ -1,0 +1,115 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 26px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 600px;
+}
+
+.modalHeaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .htmlLogo {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .modalHeader {
+    padding: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.StepComponent-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 50%;
+    background-color: #142683;
+  }
+
+  .title {
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+  }
+
+  .inputBox {
+    width: 80px;
+    padding: 0;
+    margin: 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #142683;
+    text-indent: 6px;
+    margin-left: auto;
+  }
+}
+
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hr {
+  background-color: #ebf0f5;
+  color: #ebf0f5;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-top: 14px;
+
+  .saveBtn {
+    padding: 12px 20px;
+    background-color: #142683;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cancelBtn {
+    padding: 12px 20px;
+    background-color: white;
+    color: #142683;
+    border-radius: 5px;
+    border: 1px solid #142683;
+    cursor: pointer;
+  }
+}

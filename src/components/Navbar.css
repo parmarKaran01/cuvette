@@ -1,0 +1,40 @@
+.Navbar-container {
+  /* background-color: aquamarine; */
+  border-bottom: 1px solid #ebf0f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+
+  .cuvetteLogo{
+    width: 100px;
+    height: auto;
+  }
+
+  @media only screen and (max-width : 800px){
+    padding: 1rem;
+  }
+}
+
+.userInfoWrapper {
+  padding: 0px 10px;
+  border: 1px solid #ebf0f5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  .avatar {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    background-color: aqua;
+    border-radius: 50%;
+  }
+  .userName {
+    font-size: 14px;
+    font-weight: 700;
+   
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}

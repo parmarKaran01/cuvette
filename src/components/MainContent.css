@@ -1,0 +1,308 @@
+.MainContent-container {
+  flex: 7;
+  padding: 1rem 3rem 1rem 1.5rem;
+  height: 100%;
+
+  @media only screen and (max-width: 800px) {
+    padding: 0.5rem;
+  }
+
+  .mainHeader {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: #566474;
+  }
+
+  .skillAnalyticsWrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 2rem;
+
+    @media only screen and (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+
+    .centerContainer {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .HtmlComponent-container {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #ebf0f5;
+        border-radius: 10px;
+        @media only screen and (max-width: 800px) {
+          flex-wrap: wrap;
+        }
+        .htmlLogo {
+          width: 40px;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .htmlCompBtn {
+          padding: 12px 24px;
+          background-color: #142683;
+          color: white;
+          border-radius: 5px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .content-wrapper {
+          display: flex;
+          align-items: flex-start;
+          .title {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: -0.02em;
+          }
+          .questions {
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: -0.02em;
+            text-align: left;
+          }
+        }
+      }
+
+      .QuickStats-container {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ebf0f5;
+        border-radius: 10px;
+        .quickStatHeader {
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+          letter-spacing: -0.02em;
+        }
+
+        .statswrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding-top: 1.5rem;
+          .StatsItem-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .statsImage {
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              padding: 1rem;
+              border: 1px solid #ebf0f5;
+              object-fit: contain;
+              .image {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .infoWrapper {
+              .infoValue {
+                padding: 0;
+                margin: 0;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: -0.02em;
+              }
+
+              .infoTitle {
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                color: #9eaab7;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+
+      .ComparisonComponent-container {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ebf0f5;
+        border-radius: 10px;
+        .headercontent-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .headercontent {
+            .header-title {
+              padding: 0;
+              margin: 0;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 28px;
+              letter-spacing: -0.02em;
+            }
+
+            .header-para {
+              padding: 0;
+              margin: 0;
+              padding-top: 1rem;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 21px;
+              letter-spacing: -0.02em;
+              text-align: left;
+              color: #566474;
+
+              /* .bold {
+                font-family: DM Sans;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 21px;
+                letter-spacing: -0.02em;
+              } */
+            }
+          }
+          .statsImage {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            padding: 1rem;
+            border: 1px solid #ebf0f5;
+            object-fit: contain;
+            .image {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .rightContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .SyllabusAnalysis-container {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ebf0f5;
+        border-radius: 10px;
+
+        .syllabusTitle {
+          padding: 0;
+
+          margin: 0;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 28px;
+          letter-spacing: -0.02em;
+        }
+
+        .graph-wrapper {
+          padding-top: 1.2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .itemName {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: -0.02em;
+          color: #566474;
+        }
+
+        .progressWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          .progress-bar {
+            width: 60%;
+            height: 12px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+          }
+
+          .progress-bar-fill {
+            height: 100%;
+            background-color: #4caf50; /* Green color for the filled area */
+            text-align: center;
+            line-height: 20px;
+            color: #fff; /* White text color */
+            transition: width 1s; /* Smooth transition animation */
+          }
+        }
+      }
+
+      .QuestionAnalysis-container {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #ebf0f5;
+        border-radius: 10px;
+
+        .headerWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .title {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+          }
+
+          .value {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: -0.02em;
+            color: #438af6;
+          }
+        }
+
+        .desc {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: -0.02em;
+          color: #566474;
+        }
+      }
+    }
+  }
+}
