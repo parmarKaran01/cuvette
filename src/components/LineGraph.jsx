@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   ReferenceDot,
   ReferenceLine,
+  CartesianGrid,
 } from "recharts";
 import "./LineGraph.css";
 
@@ -59,6 +60,7 @@ const LineGraph = ({ score, percentile }) => {
           bottom: 5,
         }}
       >
+        <CartesianGrid strokeOpacity={0.3} strokeDasharray="3 3"/>
         <XAxis
           dataKey={"percentile"}
           type="number"
@@ -79,6 +81,13 @@ const LineGraph = ({ score, percentile }) => {
           y={20}
           r={8}
           fill="orange"
+          stroke="none"
+        />
+        <ReferenceDot
+          x={percentile}
+          y={score}
+          r={8}
+          fill="#438AF6"
           stroke="none"
         />
         <ReferenceLine

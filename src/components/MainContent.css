@@ -109,6 +109,7 @@
               height: 20px;
               border-radius: 50%;
               padding: 1rem;
+              background-color: #F7F8FA;
               border: 1px solid #ebf0f5;
               object-fit: contain;
               flex-shrink: 0;
@@ -189,6 +190,7 @@
             border-radius: 50%;
             padding: 1rem;
             border: 1px solid #ebf0f5;
+            background-color: #F7F8FA;
             object-fit: contain;
             flex-shrink: 0;
             .image {

@@ -103,6 +103,16 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .arrow{
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+    }
   }
 
   .cancelBtn {
