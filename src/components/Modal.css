@@ -55,6 +55,7 @@
     color: white;
     border-radius: 50%;
     background-color: #142683;
+    flex-shrink: 0;
   }
 
   .title {
