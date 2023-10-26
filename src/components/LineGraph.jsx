@@ -10,7 +10,7 @@ import {
   ReferenceDot,
   ReferenceLine,
 } from "recharts";
-import "./LineGraph.css"
+import "./LineGraph.css";
 
 const LineGraph = ({ score, percentile }) => {
   const data = [
@@ -29,7 +29,10 @@ const LineGraph = ({ score, percentile }) => {
   const xTicks = Array.from({ length: 6 }, (_, i) => i * 20);
   const averageReference = 72;
 
-  const sortedData = data.sort((a,b) => a.percentile - b.percentile)
+  const sortedData = data.sort((a, b) => a.percentile - b.percentile);
+  const formatXAxis = (tickItem) => {
+    return `${tickItem}%`;
+  };
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length && label === percentile) {
@@ -56,14 +59,19 @@ const LineGraph = ({ score, percentile }) => {
           bottom: 5,
         }}
       >
-        <XAxis dataKey={"percentile"} type="number" domain={[0, 100]}/>
-        <YAxis  dataKey={"score"} hide/>
-        <Tooltip content={<CustomTooltip />}/>
-        <Legend />
+        <XAxis
+          dataKey={"percentile"}
+          type="number"
+          domain={[0, 100]}
+          tickLine={false}
+          tickFormatter={formatXAxis}
+        />
+        <YAxis dataKey={"score"} hide />
+        <Tooltip content={<CustomTooltip />} />
         <Line
           type="monotone"
           dataKey="score"
-          stroke="#8884d8"
+          stroke="#438AF6"
           activeDot={{ r: 8 }}
         />
         <ReferenceDot
@@ -78,11 +86,7 @@ const LineGraph = ({ score, percentile }) => {
           stroke="orange"
           strokeDasharray="5 5"
         />
-        <ReferenceLine
-          x={percentile}
-          stroke="blue"
-          strokeDasharray="5 5"
-        />
+        <ReferenceLine x={percentile} stroke="#438AF6" strokeDasharray="5 5" />
       </LineChart>
     </ResponsiveContainer>
   );

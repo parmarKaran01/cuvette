@@ -11,6 +11,7 @@ const StepComponent = ({ idx, title, state, setState }) => {
         onChange={(e) => setState(e.target.value)}
         className="inputBox"
         value={state}
+        type="number"
       />
     </div>
   );
