@@ -21,7 +21,7 @@ const LineGraph = ({ score, percentile }) => {
     { score: 11, percentile: 90 },
     { score: 10, percentile: 85 },
     { score: 1, percentile: 5 },
-    { score: 5, percentile: 50 },
+    { score: 6, percentile: 50 },
     { score: score, percentile: percentile },
     // Add more data points here
   ];
@@ -32,7 +32,7 @@ const LineGraph = ({ score, percentile }) => {
   const sortedData = data.sort((a,b) => a.percentile - b.percentile)
 
   const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
+    if (active && payload && payload.length && label === percentile) {
       return (
         <div className="custom-tooltip">
           <p className="label">{`${label}% Percentile`}</p>
@@ -56,8 +56,8 @@ const LineGraph = ({ score, percentile }) => {
           bottom: 5,
         }}
       >
-        <XAxis dataKey={"percentile"} type="number" />
-        <YAxis hide dataKey={"score"} />
+        <XAxis dataKey={"percentile"} type="number" domain={[0, 100]}/>
+        <YAxis  dataKey={"score"} hide/>
         <Tooltip content={<CustomTooltip />}/>
         <Legend />
         <Line

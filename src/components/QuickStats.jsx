@@ -21,7 +21,7 @@ const StatsItem = ({ image, value, title }) => {
       <div className="QuickStats-container">
         <h3 className="quickStatHeader">Quick Statistics</h3>
         <div className="statswrapper">
-          <StatsItem value={rank} title={"Your Rank"} image={Trophy} />
+          <StatsItem value={rank.toLocaleString()} title={"Your Rank"} image={Trophy} />
           <StatsItem
             value={`${percentile}%`}
             title={"Percentile"}

@@ -34,22 +34,34 @@ const Modal = ({
     setRank(localRank);
     setPercentile(localPercentile);
     setCurrentScore(localScore);
-    onClose()
+    onClose();
   };
 
   const stepsArray = [
     {
-      title: "Update Your rank",
+      title: (
+        <span>
+          Update Your <b>rank</b>
+        </span>
+      ),
       state: localRank,
       setState: setLocalRank,
     },
     {
-      title: "Update Your percentile",
+      title: (
+        <span>
+          Update Your <b>percentile</b>
+        </span>
+      ),
       state: localPercentile,
       setState: setLocalPercentile,
     },
     {
-      title: "Update Your current score (out of 15)",
+      title: (
+        <span>
+          Update Your <b>current score (out of 15)</b>
+        </span>
+      ),
       state: localScore,
       setState: setLocalScore,
     },
@@ -83,7 +95,9 @@ const Modal = ({
           <button className="cancelBtn" onClick={onClose}>
             Cancel
           </button>
-          <button className="saveBtn" onClick={onSave}>Save</button>
+          <button className="saveBtn" onClick={onSave}>
+            Save
+          </button>
         </div>
       </div>
     </div>
