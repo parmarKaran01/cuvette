@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 import HtmlLogo from "../assets/htmlLogo.png";
+import Arrow from "../assets/arrow.svg";
 
 const StepComponent = ({ idx, title, state, setState }) => {
   return (
@@ -11,6 +12,7 @@ const StepComponent = ({ idx, title, state, setState }) => {
         onChange={(e) => setState(e.target.value)}
         className="inputBox"
         value={state}
+        type="number"
       />
     </div>
   );
@@ -97,6 +99,7 @@ const Modal = ({
           </button>
           <button className="saveBtn" onClick={onSave}>
             Save
+            <img src={Arrow} className="arrow"/>
           </button>
         </div>
       </div>
